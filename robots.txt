@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fragiovis.github.io/sitemap.xml
