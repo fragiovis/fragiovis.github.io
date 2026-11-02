@@ -3,19 +3,23 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Francesco Giovanardi — Computer Engineer · Data &amp; Machine Learning</title>
-<meta name="description" content="Francesco Giovanardi — AI &amp; Data Engineer, M.Sc. in Computer Engineering 110/110 cum laude at Università Roma Tre with a thesis carried out at the University of Michigan. Data engineering, machine learning, big data and LLMs.">
+<title>Francesco Giovanardi — AI &amp; Data Engineer</title>
+<meta name="description" content="Francesco Giovanardi — AI &amp; Data Engineer based in Rome. M.Sc. in Computer Engineering, 110/110 cum laude, at Università Roma Tre, with a master's thesis carried out at the University of Michigan. Data pipelines, machine learning and LLM applications.">
 <meta name="author" content="Francesco Giovanardi">
-<meta name="keywords" content="Francesco Giovanardi, fragiovis, Computer Engineering, Roma Tre, University of Michigan, machine learning, data engineering, big data, LLM, missing data imputation">
+<meta name="keywords" content="Francesco Giovanardi, fragiovis, AI Engineer, Data Engineer, Computer Engineering, Roma Tre, University of Michigan, machine learning, data engineering, big data, LLM">
 <link rel="canonical" href="https://fragiovis.github.io/">
 <meta property="og:type" content="profile">
-<meta property="og:title" content="Francesco Giovanardi — Data & Machine Learning">
-<meta property="og:description" content="AI &amp; Data Engineer · M.Sc. 110/110 cum laude (Roma Tre) · Thesis at the University of Michigan · Data engineering, ML and LLMs.">
+<meta property="og:title" content="Francesco Giovanardi — AI &amp; Data Engineer">
+<meta property="og:description" content="AI &amp; Data Engineer · M.Sc. 110/110 cum laude (Roma Tre) · Master's thesis at the University of Michigan · Data pipelines, machine learning and LLM applications.">
 <meta property="og:url" content="https://fragiovis.github.io/">
+<meta property="og:image" content="https://fragiovis.github.io/photo.jpg">
 <meta property="profile:first_name" content="Francesco">
 <meta property="profile:last_name" content="Giovanardi">
 <meta name="twitter:card" content="summary">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232b59c3'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='700' fill='white' text-anchor='middle'%3EFG%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#1c3fd0">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231c3fd0'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='700' fill='white' text-anchor='middle'%3EFG%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/hanken-grotesk.woff2" as="font" type="font/woff2" crossorigin>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -23,217 +27,401 @@
   "name": "Francesco Giovanardi",
   "alternateName": "fragiovis",
   "url": "https://fragiovis.github.io/",
+  "image": "https://fragiovis.github.io/photo.jpg",
   "jobTitle": "AI & Data Engineer",
   "address": {"@type": "PostalAddress", "addressLocality": "Rome", "addressCountry": "IT"},
   "alumniOf": [
     {"@type": "CollegeOrUniversity", "name": "Università degli Studi Roma Tre"},
+    {"@type": "CollegeOrUniversity", "name": "University of Michigan"},
     {"@type": "CollegeOrUniversity", "name": "Universidad de Alcalá"}
   ],
-  "affiliation": [
-    {"@type": "CollegeOrUniversity", "name": "Università degli Studi Roma Tre"},
-    {"@type": "CollegeOrUniversity", "name": "University of Michigan"}
-  ],
-  "knowsAbout": ["Machine Learning", "Data Engineering", "Big Data", "Apache Spark", "Apache Kafka", "Large Language Models", "Missing Data Imputation"],
+  "knowsAbout": ["Data Engineering", "Machine Learning", "Big Data", "Apache Spark", "Apache Kafka", "Large Language Models"],
   "sameAs": ["https://github.com/fragiovis", "https://www.linkedin.com/in/francescogiovanardi"]
 }
 </script>
 <style>
+@font-face { font-family: "Bricolage Grotesque"; src: url(fonts/bricolage-grotesque.woff2) format("woff2"); font-weight: 200 800; font-display: swap; }
+@font-face { font-family: "Hanken Grotesk"; src: url(fonts/hanken-grotesk.woff2) format("woff2"); font-weight: 100 900; font-display: swap; }
+@font-face { font-family: "JetBrains Mono"; src: url(fonts/jetbrains-mono.woff2) format("woff2"); font-weight: 100 800; font-display: swap; }
+
 :root {
-  --bg: #fbfbfa; --surface: #ffffff; --text: #1b1d22; --muted: #5d6370;
-  --line: #e6e6e3; --accent: #2b59c3; --accent-soft: #e9effb; --chip: #f2f2ef;
+  color-scheme: light;
+  --paper: #f5f4ee;
+  --surface: #ffffff;
+  --ink: #12151c;
+  --ink-2: #4a4f5c;
+  --line: #d9d8ce;
+  --hero: #1c3fd0;
+  --hero-2: #dfe5ff;
+  --band: #12151c;
+  --band-2: #aab1c0;
+  --band-line: #2c313d;
+  --tile-dark: #12151c;
+  --butter: #ffd766;
+  --mint: #b5ecc9;
+  --coral: #ff9a7a;
+  --lilac: #d8d0ff;
+  --sky: #c4e3ff;
+  --rose: #ffd3da;
+  --on-tile: #12151c;
+  --on-tile-2: #31363f;
+  --display: "Bricolage Grotesque", "Hanken Grotesk", system-ui, sans-serif;
+  --body: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #111317; --surface: #181b21; --text: #e9eaee; --muted: #a0a6b2;
-    --line: #2a2e36; --accent: #7aa2ff; --accent-soft: #1d2740; --chip: #20242c;
+    color-scheme: dark;
+    --paper: #0e1116;
+    --surface: #191d25;
+    --ink: #eef0f4;
+    --ink-2: #a9afbd;
+    --line: #2a2f3a;
+    --hero: #1a37b4;
+    --band: #171b23;
+    --band-line: #2c313d;
+    --tile-dark: #222836;
   }
 }
+
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body {
-  margin: 0; background: var(--bg); color: var(--text);
-  font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 400 1.0625rem/1.55 var(--body); -webkit-font-smoothing: antialiased; }
+a { color: inherit; }
+img { display: block; max-width: 100%; height: auto; }
+h1, h2, h3, p, dl, dd, ul, ol, figure { margin: 0; padding: 0; }
+ul, ol { list-style: none; }
+.wrap { width: min(1160px, 100% - 40px); margin-inline: auto; }
+.vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+:focus-visible { outline: 3px solid var(--butter); outline-offset: 3px; border-radius: 4px; }
+.mono { font-family: var(--mono); font-size: .75rem; letter-spacing: .04em; text-transform: uppercase; }
+section[id], footer[id] { scroll-margin-top: 16px; }
+
+/* Hero */
+.hero { position: relative; background: var(--hero); color: #fff; overflow: hidden; }
+.hero::before { content: ""; position: absolute; inset: 0; background-image: radial-gradient(rgba(255,255,255,.17) 1.2px, transparent 1.3px); background-size: 22px 22px; -webkit-mask-image: linear-gradient(115deg, transparent 35%, #000 100%); mask-image: linear-gradient(115deg, transparent 35%, #000 100%); pointer-events: none; }
+.hero > .wrap { position: relative; }
+.topbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 22px; }
+.mark { font: 700 1.05rem/1 var(--display); text-decoration: none; display: grid; place-items: center; width: 42px; height: 42px; border: 1.5px solid rgba(255,255,255,.65); border-radius: 12px; }
+.topbar ul { display: flex; gap: clamp(14px, 3vw, 30px); font-size: .95rem; }
+.topbar ul a { text-decoration: none; color: var(--hero-2); }
+.topbar ul a:hover { color: #fff; text-decoration: underline; text-underline-offset: 4px; }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: clamp(28px, 5vw, 72px); align-items: end; padding-block: clamp(28px, 5vw, 56px) clamp(32px, 5vw, 56px); }
+.kicker { color: var(--butter); font-size: .82rem; margin-bottom: 18px; }
+h1 { font: 700 clamp(3.1rem, 8.6vw, 6.9rem)/.94 var(--display); letter-spacing: -.035em; }
+.lead { max-width: 37rem; font-size: clamp(1.1rem, 1.7vw, 1.3rem); line-height: 1.45; color: var(--hero-2); margin-top: 24px; }
+.actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 28px; }
+.btn { display: inline-flex; align-items: center; gap: 9px; padding: 11px 18px; border-radius: 999px; font-weight: 600; font-size: .98rem; text-decoration: none; border: 1.5px solid rgba(255,255,255,.6); color: #fff; transition: background-color .15s, color .15s, border-color .15s; }
+.btn svg { width: 17px; height: 17px; fill: currentColor; flex: none; }
+.btn:hover { background: #fff; color: #12151c; border-color: #fff; }
+.btn.solid { background: var(--butter); border-color: var(--butter); color: #12151c; }
+.btn.solid:hover { background: #fff; border-color: #fff; }
+.status { display: inline-flex; align-items: center; gap: 9px; font-size: .95rem; color: var(--hero-2); margin-left: 6px; }
+.status::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: var(--mint); flex: none; }
+.portrait { position: relative; width: clamp(230px, 27vw, 340px); margin: 0 12px 12px 0; }
+.portrait::before { content: ""; position: absolute; inset: 14px -12px -12px 14px; background: var(--butter); border-radius: 22px; }
+.portrait img { position: relative; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 30%; border-radius: 22px; }
+.facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid rgba(255,255,255,.3); }
+.facts > div { padding-block: 20px 26px; padding-right: 24px; }
+.facts > div + div { padding-left: 24px; border-left: 1px solid rgba(255,255,255,.3); }
+.facts dt { font: 700 clamp(1.5rem, 2.6vw, 2.1rem)/1.1 var(--display); letter-spacing: -.02em; }
+.facts dd { font-size: .97rem; line-height: 1.4; color: var(--hero-2); margin-top: 6px; }
+
+/* Work */
+.section { padding-block: clamp(56px, 8vw, 96px); }
+.section-head { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 12px 40px; margin-bottom: clamp(24px, 3.5vw, 38px); }
+h2 { font: 700 clamp(2.1rem, 4.6vw, 3.4rem)/1 var(--display); letter-spacing: -.028em; }
+.section-head p { max-width: 27rem; color: var(--ink-2); }
+.areas { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 14px; }
+.tile { position: relative; grid-column: span 2; display: flex; flex-direction: column; padding: 24px; border-radius: 22px; background: var(--tile, var(--surface)); color: var(--on-tile); text-decoration: none; transition: transform .18s ease, box-shadow .18s ease; }
+a.tile:hover { transform: translateY(-4px); box-shadow: 0 14px 30px -18px rgba(18,21,28,.55); }
+.tile-top { display: flex; align-items: start; justify-content: space-between; gap: 12px; min-height: 22px; margin-bottom: 26px; color: var(--on-tile-2); }
+.go { width: 22px; height: 22px; flex: none; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; color: var(--on-tile); transition: transform .18s ease; }
+a.tile:hover .go { transform: translate(3px, -3px); }
+.stat { font: 700 clamp(2.5rem, 4.4vw, 3.5rem)/1 var(--display); letter-spacing: -.03em; display: flex; align-items: center; flex-wrap: wrap; gap: .18em; }
+.stat svg { width: .72em; height: .72em; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+.stat-label { font-size: .97rem; line-height: 1.35; color: var(--on-tile-2); margin-top: 8px; }
+.tile h3 { font: 700 1.3rem/1.15 var(--display); letter-spacing: -.012em; margin-top: 24px; }
+.tile .desc { margin-top: 8px; line-height: 1.45; }
+.chips { display: flex; flex-wrap: wrap; gap: 5px; margin-top: auto; padding-top: 18px; }
+.chips li { font: 500 .73rem/1 var(--mono); padding: 6px 9px; border-radius: 999px; border: 1px solid color-mix(in srgb, currentColor 38%, transparent); }
+.t-research { grid-column: span 4; --tile: var(--tile-dark); --on-tile: #fff; --on-tile-2: #c2c8d6; }
+.t-research .stat { color: var(--butter); font-size: clamp(3.2rem, 7.6vw, 6rem); }
+.t-research .stat-label { font-size: 1.1rem; max-width: 40rem; }
+.t-research .desc { max-width: 40rem; font-size: 1.05rem; }
+.t-stream { --tile: var(--mint); }
+.t-big { --tile: var(--butter); }
+.t-ml { --tile: var(--coral); }
+.t-llm { --tile: var(--lilac); }
+.t-rec { --tile: var(--sky); grid-column: span 3; }
+.t-int { --tile: var(--rose); grid-column: span 3; }
+.note { font: 500 .73rem/1.3 var(--mono); text-transform: uppercase; letter-spacing: .04em; white-space: nowrap; text-align: right; }
+.more { display: inline-flex; align-items: center; gap: 8px; margin-top: 22px; font-weight: 600; text-underline-offset: 4px; }
+.more .go { color: currentColor; width: 18px; height: 18px; }
+
+/* Experience band */
+.band { background: var(--band); color: #fff; }
+.band .section-head p { color: var(--band-2); }
+.timeline > li { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 8px 32px; padding-block: 26px; border-top: 1px solid var(--band-line); }
+.timeline > li:last-child { padding-bottom: 0; }
+.timeline .when { color: var(--butter); padding-top: 6px; }
+.timeline h3 { font: 700 clamp(1.25rem, 2.2vw, 1.6rem)/1.15 var(--display); letter-spacing: -.015em; }
+.timeline .org { color: var(--band-2); margin-top: 5px; }
+.timeline .what { margin-top: 8px; max-width: 46rem; color: #e4e7ee; }
+
+/* Education and skills */
+.edu { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.edu > li { background: var(--surface); border-radius: 22px; padding: 24px; display: flex; flex-direction: column; border-top: 6px solid var(--accent); }
+.edu .when { color: var(--ink-2); }
+.edu h3 { font: 700 1.3rem/1.15 var(--display); letter-spacing: -.012em; margin-top: 12px; }
+.edu .grade { font-weight: 700; margin-top: 8px; }
+.edu .where { color: var(--ink-2); margin-top: 8px; line-height: 1.4; }
+.edu .small { color: var(--ink-2); font-size: .92rem; margin-top: 8px; }
+.edu .small a { text-underline-offset: 3px; }
+.skills { margin-top: clamp(56px, 8vw, 88px); }
+.skills dl > div { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 8px 32px; padding-block: 15px; border-top: 1px solid var(--line); }
+.skills dt { font-weight: 700; padding-top: 5px; }
+.skills dd ul { display: flex; flex-wrap: wrap; gap: 6px; }
+.skills dd li { background: var(--surface); border-radius: 999px; padding: 5px 12px; font-size: .95rem; }
+
+/* Footer */
+.foot { position: relative; background: var(--hero); color: #fff; overflow: hidden; }
+.foot-in { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 24px 40px; padding-block: clamp(44px, 6vw, 70px) 26px; }
+.foot h2 { max-width: 15em; }
+.foot .actions { margin-top: 0; }
+.legal { border-top: 1px solid rgba(255,255,255,.3); padding-block: 16px 22px; font-size: .9rem; color: var(--hero-2); }
+
+@media (max-width: 960px) {
+  .areas { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .tile, .t-rec, .t-int { grid-column: span 1; }
+  .t-research { grid-column: span 2; }
+  .edu { grid-template-columns: 1fr; }
 }
-a { color: var(--accent); text-decoration: none; }
-a:hover { text-decoration: underline; }
-.wrap { max-width: 880px; margin: 0 auto; padding: 0 20px; }
-nav { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
-nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 56px; gap: 16px; }
-nav .brand { font-weight: 700; color: var(--text); letter-spacing: -.01em; }
-nav ul { display: flex; gap: 18px; list-style: none; margin: 0; padding: 0; font-size: 14px; }
-nav ul a { color: var(--muted); }
-nav ul a:hover { color: var(--text); text-decoration: none; }
-header { padding: 72px 0 40px; }
-h1 { font-size: clamp(34px, 6vw, 48px); line-height: 1.1; letter-spacing: -.025em; margin: 0 0 12px; }
-.tagline { font-size: 19px; color: var(--muted); margin: 0 0 24px; max-width: 640px; }
-.links { display: flex; flex-wrap: wrap; gap: 10px; }
-.btn { display: inline-flex; align-items: center; gap: 8px; padding: 9px 16px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface); color: var(--text); font-size: 14px; font-weight: 500; }
-.btn:hover { border-color: var(--accent); text-decoration: none; }
-.btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
-.btn svg { width: 16px; height: 16px; fill: currentColor; }
-section { padding: 36px 0; border-top: 1px solid var(--line); }
-h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); margin: 0 0 22px; font-weight: 600; }
-h3 { font-size: 18px; margin: 0; letter-spacing: -.01em; }
-.item { display: grid; grid-template-columns: 1fr auto; gap: 2px 16px; margin-bottom: 26px; }
-.item:last-child { margin-bottom: 0; }
-.item .when { color: var(--muted); font-size: 14px; white-space: nowrap; }
-.item .where { color: var(--muted); font-size: 15px; grid-column: 1 / -1; }
-.item p, .item ul { grid-column: 1 / -1; margin: 6px 0 0; }
-.item ul { padding-left: 18px; }
-.highlight { background: var(--accent-soft); border-radius: 14px; padding: 22px; }
-.grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
-.card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 18px; display: flex; flex-direction: column; gap: 8px; color: var(--text); }
-.card:hover { border-color: var(--accent); text-decoration: none; }
-.card p { margin: 0; color: var(--muted); font-size: 15px; }
-.card .meta { font-size: 13px; color: var(--muted); }
-.chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; padding-top: 6px; }
-.chip { background: var(--chip); border-radius: 999px; padding: 3px 10px; font-size: 12.5px; color: var(--text); }
-.skills { display: grid; grid-template-columns: 170px 1fr; gap: 12px 20px; }
-.skills dt { color: var(--muted); font-size: 15px; }
-.skills dd { margin: 0; }
-footer { padding: 32px 0 48px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
-@media (max-width: 640px) {
-  nav ul { display: none; }
-  header { padding: 48px 0 28px; }
-  .grid { grid-template-columns: 1fr; }
-  .item { grid-template-columns: 1fr; }
-  .skills { grid-template-columns: 1fr; gap: 2px; }
-  .skills dd { margin-bottom: 10px; }
+@media (max-width: 680px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .portrait { order: -1; width: 168px; }
+  .facts { grid-template-columns: 1fr; }
+  .facts > div { padding-block: 16px; padding-right: 0; }
+  .facts > div + div { padding-left: 0; border-left: 0; border-top: 1px solid rgba(255,255,255,.3); }
+  .status { margin-left: 0; width: 100%; margin-top: 4px; }
+  .tile-top { flex-wrap: wrap; }
+  .note { white-space: normal; text-align: left; }
+  .areas { grid-template-columns: 1fr; }
+  .t-research { grid-column: span 1; }
+  .timeline > li, .skills dl > div { grid-template-columns: 1fr; }
+  .timeline .when { padding-top: 0; }
+  .skills dt { padding-top: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; }
+  a.tile:hover, a.tile:hover .go { transform: none; }
 }
 </style>
 </head>
 <body>
-<nav>
+
+<header class="hero">
   <div class="wrap">
-    <a class="brand" href="#">Francesco Giovanardi</a>
-    <ul>
-      <li><a href="#research">Research</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#skills">Skills</a></li>
-    </ul>
-  </div>
-</nav>
+    <nav class="topbar" aria-label="Main">
+      <a class="mark" href="#top" aria-label="Francesco Giovanardi, home">FG</a>
+      <ul>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
 
-<main class="wrap">
-  <header>
-    <h1>Francesco Giovanardi</h1>
-    <p class="tagline">AI &amp; data engineer with an M.Sc. in Computer Engineering from Università Roma Tre (110/110 cum laude) and a master's thesis carried out at the University of Michigan. I build data pipelines and machine-learning systems, from raw data to models people can actually query.</p>
-    <div class="links">
-      <a class="btn primary" href="https://github.com/fragiovis">
-        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
-        GitHub
-      </a>
-      <a class="btn" href="https://www.linkedin.com/in/francescogiovanardi">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
-        LinkedIn
-      </a>
-      <span class="btn" style="cursor:default">📍 Rome, Italy</span>
+    <div class="hero-grid" id="top">
+      <div>
+        <p class="kicker mono">AI &amp; Data Engineer · Rome, Italy</p>
+        <h1>Francesco Giovanardi</h1>
+        <p class="lead">I build data pipelines, machine-learning models and LLM-based applications. M.Sc. in Computer Engineering from Università Roma Tre, with a master's thesis carried out at the University of Michigan.</p>
+        <div class="actions">
+          <a class="btn solid" href="https://www.linkedin.com/in/francescogiovanardi">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+            LinkedIn
+          </a>
+          <a class="btn" href="https://github.com/fragiovis">
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+            GitHub
+          </a>
+          <span class="status">Open to AI Engineer and Data Engineer roles</span>
+        </div>
+      </div>
+      <figure class="portrait">
+        <img src="photo.jpg" width="760" height="977" alt="Portrait of Francesco Giovanardi">
+      </figure>
     </div>
-  </header>
 
-  <section id="research">
-    <h2>Research</h2>
-    <div class="highlight">
-      <div class="item">
-        <h3>Mechanism-guided imputation of missing data</h3>
-        <span class="when">Apr – Sep 2026</span>
-        <span class="where">M.Sc. thesis (110/110 cum laude) · University of Michigan with Prof. H.V. Jagadish, on site in Ann Arbor Jun – Sep 2026 · advisor at Roma Tre: Prof. Riccardo Torlone</span>
-        <p>Real-world data is often missing for a reason: people skip the questions they are afraid to answer. Standard imputation methods (MICE, PMM, generative imputers) assume the opposite. My thesis treats the missingness mechanism as a signal rather than a nuisance: it uses an expert's knowledge of <em>why</em> values are missing to reconstruct them under <em>missing-not-at-random</em> self-masking, together with a recommender that picks the right correction for each case. Evaluated on real survey data against MICE, PMM, NARFCS and GAIN, it reaches a <strong>3–10× lower Wasserstein distance than MICE</strong> on CPS retirement income. A paper on MGI is in preparation for submission.</p>
+    <dl class="facts">
+      <div><dt>110/110 cum laude</dt><dd>in both the M.Sc. and the B.Sc., Università Roma Tre</dd></div>
+      <div><dt>Ann Arbor</dt><dd>on site at the University of Michigan, Jun – Sep 2026</dd></div>
+      <div><dt>2 years</dt><dd>of research collaboration on a real-time IoT data platform</dd></div>
+    </dl>
+  </div>
+</header>
+
+<main>
+  <section class="section" id="work">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>What I work on</h2>
+        <p>One reference project for each area. The details are in each project's README.</p>
+      </div>
+
+      <div class="areas">
+        <article class="tile t-research">
+          <div class="tile-top"><span class="mono">Research · Missing data</span><span class="note">Paper in preparation</span></div>
+          <p class="stat">3–10×</p>
+          <p class="stat-label">lower Wasserstein distance than MICE on CPS retirement income</p>
+          <h3>Mechanism-Guided Imputation</h3>
+          <p class="desc">My master's thesis at the University of Michigan, with Prof. H.V. Jagadish and Prof. Riccardo Torlone. It fills in data that is missing not at random, using an expert's knowledge of why it is missing.</p>
+          <ul class="chips"><li>Python</li><li>Statistics</li><li>Streamlit</li></ul>
+        </article>
+
+        <article class="tile t-stream">
+          <div class="tile-top"><span class="mono">Data engineering · Streaming</span></div>
+          <p class="stat">733</p>
+          <p class="stat-label">LoRaWAN sensors across 7 schools in Rome</p>
+          <h3>Scuole di Roma IoT platform</h3>
+          <p class="desc">Lambda architecture for environmental data, co-designed and co-developed with a Roma Tre researcher.</p>
+          <ul class="chips"><li>Kafka</li><li>Spark Streaming</li><li>Hadoop</li><li>InfluxDB</li><li>Cassandra</li><li>Docker</li></ul>
+        </article>
+
+        <a class="tile t-big" href="https://github.com/fragiovis/BigData-FlightAnalysis">
+          <div class="tile-top"><span class="mono">Big data · Benchmarking</span><svg class="go" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></div>
+          <p class="stat">7M</p>
+          <p class="stat-label">US flights, three engines, three environments</p>
+          <h3>Flight Analysis</h3>
+          <p class="desc">Spark Core, Spark SQL and Hive compared locally, on YARN and on an AWS EMR cluster.</p>
+          <ul class="chips"><li>PySpark</li><li>Hive</li><li>Hadoop</li><li>AWS EMR</li></ul>
+        </a>
+
+        <a class="tile t-ml" href="https://github.com/fragiovis/ATP-oracle">
+          <div class="tile-top"><span class="mono">Machine learning</span><svg class="go" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></div>
+          <p class="stat">130K+</p>
+          <p class="stat-label">ATP matches, from 1986 to 2026</p>
+          <h3>ATP Oracle</h3>
+          <p class="desc">Pre-match tennis predictions: leakage-free features, time-based splits and six models with SHAP explanations.</p>
+          <ul class="chips"><li>LightGBM</li><li>XGBoost</li><li>SHAP</li><li>AWS S3</li></ul>
+        </a>
+
+        <a class="tile t-llm" href="https://github.com/fragiovis/ATP-oracle">
+          <div class="tile-top"><span class="mono">LLM applications</span><svg class="go" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></div>
+          <p class="stat">Text <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg><span class="vh">to</span> SQL</p>
+          <p class="stat-label">questions answered from the data itself</p>
+          <h3>ATP Oracle agent, Scuole di Roma chatbot</h3>
+          <p class="desc">A natural-language agent that routes questions to the right model, and a chatbot that queries the sensor data.</p>
+          <ul class="chips"><li>LangChain</li><li>Groq</li><li>FastAPI</li></ul>
+        </a>
+
+        <a class="tile t-rec" href="https://github.com/fragiovis/what2it">
+          <div class="tile-top"><span class="mono">Recommender systems</span><svg class="go" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></div>
+          <p class="stat">70 / 30</p>
+          <p class="stat-label">ingredients you own, and similarity to the recipes you like</p>
+          <h3>What2It</h3>
+          <p class="desc">Suggests Italian recipes from what is in your fridge, using TF-IDF content similarity.</p>
+          <ul class="chips"><li>scikit-learn</li><li>PostgreSQL</li><li>Streamlit</li></ul>
+        </a>
+
+        <a class="tile t-int" href="https://github.com/fragiovis/homework6-IDD">
+          <div class="tile-top"><span class="mono">Data integration</span><svg class="go" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></div>
+          <p class="stat">2 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg><span class="vh">into</span> 1</p>
+          <p class="stat-label">used-car datasets matched on a single mediated schema</p>
+          <h3>Used-car record linkage</h3>
+          <p class="desc">Team project of four: VIN-based ground truth, two blocking strategies and learned matchers.</p>
+          <ul class="chips"><li>recordlinkage</li><li>dedupe</li><li>pandas</li></ul>
+        </a>
+      </div>
+
+      <a class="more" href="https://github.com/fragiovis?tab=repositories">All repositories on GitHub
+        <svg class="go" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <section class="section band" id="experience">
+    <div class="wrap">
+      <div class="section-head"><h2>Experience</h2></div>
+      <ol class="timeline">
+        <li>
+          <span class="when mono">Apr – Sep 2026</span>
+          <div>
+            <h3>Visiting Master's Thesis Researcher</h3>
+            <p class="org">University of Michigan · on site in Ann Arbor, Jun – Sep 2026</p>
+          </div>
+        </li>
+        <li>
+          <span class="when mono">Feb 2024 – Feb 2026</span>
+          <div>
+            <h3>Research Collaborator, IoT Data Platform for Schools</h3>
+            <p class="org">Università Roma Tre · Unidata · Metropolitan City of Rome Capital</p>
+          </div>
+        </li>
+        <li>
+          <span class="when mono">Sep 2025</span>
+          <div>
+            <h3>Developer, European Researchers' Night 2025</h3>
+            <p class="org">Università Roma Tre</p>
+            <p class="what">An interactive educational game with an AI chatbot that explains artificial intelligence to children and teenagers.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" id="education">
+    <div class="wrap">
+      <div class="section-head"><h2>Education</h2></div>
+      <ol class="edu">
+        <li style="--accent: var(--mint)">
+          <span class="when mono">Oct 2024 – Oct 2026</span>
+          <h3>M.Sc. in Computer Engineering, Complex Systems</h3>
+          <p class="grade">110/110 cum laude</p>
+          <p class="where">Università degli Studi Roma Tre · thesis carried out at the University of Michigan</p>
+        </li>
+        <li style="--accent: var(--butter)">
+          <span class="when mono">Oct 2021 – Oct 2024</span>
+          <h3>B.Sc. in Computer Engineering</h3>
+          <p class="grade">110/110 cum laude</p>
+          <p class="where">Università degli Studi Roma Tre</p>
+          <p class="small"><a href="https://github.com/fragiovis/EvaluatingLLMs">Thesis on LLM benchmarking</a></p>
+        </li>
+        <li style="--accent: var(--sky)">
+          <span class="when mono">Sep 2023 – Mar 2024</span>
+          <h3>Erasmus+ Exchange</h3>
+          <p class="where">Escuela Politécnica Superior, Universidad de Alcalá, Spain</p>
+        </li>
+      </ol>
+
+      <div class="skills" id="skills">
+        <div class="section-head"><h2>Toolbox</h2></div>
+        <dl>
+          <div><dt>Programming</dt><dd><ul><li>Python</li><li>SQL</li><li>Java</li><li>C/C++</li></ul></dd></div>
+          <div><dt>Data &amp; big data</dt><dd><ul><li>Kafka</li><li>Spark</li><li>Hadoop</li><li>Hive</li><li>PostgreSQL</li><li>InfluxDB</li><li>Cassandra</li></ul></dd></div>
+          <div><dt>ML &amp; AI</dt><dd><ul><li>scikit-learn</li><li>PyTorch</li><li>LightGBM</li><li>XGBoost</li><li>SHAP</li><li>LangChain</li><li>RAG</li><li>FAISS</li></ul></dd></div>
+          <div><dt>Cloud &amp; services</dt><dd><ul><li>AWS (EMR, S3)</li><li>Docker</li><li>Git</li><li>Grafana</li><li>FastAPI</li><li>Streamlit</li></ul></dd></div>
+          <div><dt>Languages</dt><dd><ul><li>Italian (native)</li><li>English (B2+)</li><li>Spanish (A2)</li></ul></dd></div>
+        </dl>
       </div>
     </div>
   </section>
-
-  <section id="experience">
-    <h2>Experience</h2>
-    <div class="item">
-      <h3>Research Collaborator — “Scuole di Roma” IoT data platform</h3>
-      <span class="when">Feb 2024 – Feb 2026</span>
-      <span class="where">Università Roma Tre · Unidata · Metropolitan City of Rome Capital</span>
-      <ul>
-        <li>Co-designed and co-developed, with a Roma Tre researcher, a Lambda architecture (streaming + batch) for environmental data from a LoRaWAN network of 733 sensors across 7 schools in Rome: Kafka and Spark Streaming ingestion, batch analytics on Hadoop, storage in InfluxDB and Cassandra, all on Docker</li>
-        <li>LLM chatbot (LangChain, Llama 3.3 70B via Groq) that answers natural-language questions by generating SQL over the sensor data, plus Grafana and Streamlit dashboards</li>
-        <li>PyTorch LSTM for multi-step forecasting of sensor time series</li>
-      </ul>
-    </div>
-    <div class="item">
-      <h3>Developer — European Researchers' Night 2025</h3>
-      <span class="when">Sep 2025</span>
-      <span class="where">Università Roma Tre</span>
-      <p>Designed and built an interactive educational game with an AI chatbot to explain artificial intelligence to children and teenagers (Node.js, AI APIs).</p>
-    </div>
-  </section>
-
-  <section id="projects">
-    <h2>Selected projects</h2>
-    <div class="grid">
-      <a class="card" href="https://github.com/fragiovis/ATP-oracle">
-        <h3>ATP Oracle 🎾</h3>
-        <p>Pre-match tennis predictions from ~700K historical matches: medallion data lake, leakage-free features (surface Elo, form, H2H), six ML models, SHAP explanations and a natural-language LLM agent.</p>
-        <div class="chips"><span class="chip">LightGBM</span><span class="chip">XGBoost</span><span class="chip">HDFS</span><span class="chip">AWS</span><span class="chip">FastAPI</span><span class="chip">LLM agent</span></div>
-      </a>
-      <a class="card" href="https://github.com/fragiovis/BigData-FlightAnalysis">
-        <h3>Flight Analysis ✈️</h3>
-        <p>Spark Core vs Spark SQL vs Hive on 7M US flights, benchmarked locally, on YARN and on an AWS EMR cluster, with cross-verified outputs and a Streamlit dashboard.</p>
-        <div class="chips"><span class="chip">PySpark</span><span class="chip">Hive</span><span class="chip">Hadoop/YARN</span><span class="chip">AWS EMR</span><span class="chip">Streamlit</span></div>
-      </a>
-      <a class="card" href="https://github.com/fragiovis/EvaluatingLLMs">
-        <h3>Evaluating LLMs</h3>
-        <p>B.Sc. thesis: benchmarking open LLMs on ARC, MMLU-Pro, HumanEval and SQuAD v2, and measuring the effect of retrieval-augmented generation.</p>
-        <div class="chips"><span class="chip">LLMs</span><span class="chip">RAG</span><span class="chip">FAISS</span><span class="chip">Sentence-Transformers</span></div>
-      </a>
-      <a class="card" href="https://github.com/fragiovis/what2it">
-        <h3>What2It 🍝</h3>
-        <p>Recipe recommender that blends what is in your fridge with TF-IDF similarity to the recipes you liked.</p>
-        <div class="chips"><span class="chip">scikit-learn</span><span class="chip">PostgreSQL</span><span class="chip">Streamlit</span></div>
-      </a>
-      <a class="card" href="https://github.com/fragiovis/homework6-IDD">
-        <h3>Used-car record linkage 🚗</h3>
-        <p>Entity resolution across two large used-car datasets: mediated schema, VIN-based ground truth, blocking and learned matchers.</p>
-        <div class="chips"><span class="chip">recordlinkage</span><span class="chip">dedupe</span><span class="chip">pandas</span><span class="chip">SQLite</span></div>
-      </a>
-    </div>
-    <p style="margin-top:18px"><a href="https://github.com/fragiovis?tab=repositories">All repositories on GitHub →</a></p>
-  </section>
-
-  <section id="education">
-    <h2>Education</h2>
-    <div class="item">
-      <h3>M.Sc. in Computer Engineering — Complex Systems — 110/110 cum laude</h3>
-      <span class="when">2024 – Oct 2026</span>
-      <span class="where">Università degli Studi Roma Tre · thesis carried out at the University of Michigan</span>
-      <p>Data management, machine learning, distributed systems, big data, recommender systems, data engineering, software architecture.</p>
-    </div>
-    <div class="item">
-      <h3>B.Sc. in Computer Engineering — 110/110 cum laude</h3>
-      <span class="when">2021 – 2024</span>
-      <span class="where">Università degli Studi Roma Tre</span>
-      <p>Thesis: <a href="https://github.com/fragiovis/EvaluatingLLMs">Evaluating LLMs</a>.</p>
-    </div>
-    <div class="item">
-      <h3>Erasmus+ — Computer Engineering</h3>
-      <span class="when">Sep 2023 – Mar 2024</span>
-      <span class="where">Escuela Politécnica Superior, Universidad de Alcalá (Spain)</span>
-    </div>
-  </section>
-
-  <section id="skills">
-    <h2>Skills</h2>
-    <dl class="skills">
-      <dt>Languages</dt><dd>Python · Java · C/C++ · SQL · LaTeX</dd>
-      <dt>Data &amp; ML</dt><dd>pandas · scikit-learn · LightGBM · XGBoost · LSTM forecasting · SHAP · FAISS · LLM APIs &amp; RAG</dd>
-      <dt>Big data</dt><dd>Apache Spark · Hadoop (HDFS, YARN) · Hive · Apache Kafka · Elasticsearch · PostgreSQL</dd>
-      <dt>Cloud &amp; DevOps</dt><dd>AWS (EMR, S3, EC2) · Docker · Git</dd>
-      <dt>Web &amp; services</dt><dd>FastAPI · Spring Boot · Streamlit · Node.js</dd>
-      <dt>Spoken languages</dt><dd>Italian (native) · English (B2+) · Spanish (basic)</dd>
-    </dl>
-  </section>
 </main>
 
-<footer>
-  <div class="wrap">© 2026 Francesco Giovanardi · <a href="https://github.com/fragiovis">github.com/fragiovis</a> · <a href="https://www.linkedin.com/in/francescogiovanardi">LinkedIn</a></div>
+<footer class="foot" id="contact">
+  <div class="wrap">
+    <div class="foot-in">
+      <h2>Looking for an AI or data engineer?</h2>
+      <div class="actions">
+        <a class="btn solid" href="https://www.linkedin.com/in/francescogiovanardi">Message me on LinkedIn</a>
+        <a class="btn" href="https://github.com/fragiovis">github.com/fragiovis</a>
+      </div>
+    </div>
+    <p class="legal">© 2026 Francesco Giovanardi · Rome, Italy</p>
+  </div>
 </footer>
+
 </body>
 </html>
