@@ -153,8 +153,9 @@ a.tile:hover .go { transform: translate(3px, -3px); }
 .t-big { --tile: var(--butter); }
 .t-ml { --tile: var(--coral); }
 .t-llm { --tile: var(--lilac); }
-.t-rec { --tile: var(--sky); grid-column: span 3; }
-.t-int { --tile: var(--rose); grid-column: span 3; }
+.t-rec { --tile: var(--sky); }
+.t-spring { --tile: var(--rose); }
+.t-may { --tile: var(--hero); --on-tile: #fff; --on-tile-2: var(--hero-2); }
 .note { font: 500 .73rem/1.3 var(--mono); text-transform: uppercase; letter-spacing: .04em; white-space: nowrap; text-align: right; }
 .more { display: inline-flex; align-items: center; gap: 8px; margin-top: 22px; font-weight: 600; text-underline-offset: 4px; }
 .more .go { color: currentColor; width: 18px; height: 18px; }
@@ -193,8 +194,8 @@ a.tile:hover .go { transform: translate(3px, -3px); }
 
 @media (max-width: 960px) {
   .areas { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .tile, .t-rec, .t-int { grid-column: span 1; }
-  .t-research { grid-column: span 2; }
+  .tile { grid-column: span 1; }
+  .t-research, .t-spring { grid-column: span 2; }
   .edu { grid-template-columns: 1fr; }
 }
 @media (max-width: 680px) {
@@ -207,7 +208,7 @@ a.tile:hover .go { transform: translate(3px, -3px); }
   .tile-top { flex-wrap: wrap; }
   .note { white-space: normal; text-align: left; }
   .areas { grid-template-columns: 1fr; }
-  .t-research { grid-column: span 1; }
+  .t-research, .t-spring { grid-column: span 1; }
   .timeline > li, .skills dl > div { grid-template-columns: 1fr; }
   .timeline .when { padding-top: 0; }
   .skills dt { padding-top: 0; }
@@ -290,14 +291,14 @@ a.tile:hover .go { transform: translate(3px, -3px); }
           <ul class="chips"><li>Kafka</li><li>Spark Streaming</li><li>Hadoop</li><li>InfluxDB</li><li>Cassandra</li><li>Docker</li></ul>
         </article>
 
-        <a class="tile t-big" href="https://github.com/fragiovis/BigData-FlightAnalysis">
-          <div class="tile-top"><span class="mono">Big data · Benchmarking</span><svg class="go" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></div>
-          <p class="stat">7M</p>
-          <p class="stat-label">US flights, three engines, three environments</p>
-          <h3>Flight Analysis</h3>
-          <p class="desc">Spark Core, Spark SQL and Hive compared locally, on YARN and on an AWS EMR cluster.</p>
-          <ul class="chips"><li>PySpark</li><li>Hive</li><li>Hadoop</li><li>AWS EMR</li></ul>
-        </a>
+        <article class="tile t-may">
+          <div class="tile-top"><span class="mono">Applied AI · Custom software</span></div>
+          <p class="stat">500K+</p>
+          <p class="stat-label">gym check-ins and ~11K members in one dashboard</p>
+          <h3>BetterGym, at MayAI</h3>
+          <p class="desc">MayAI, the independent studio I co-founded (not yet incorporated), builds custom AI software for Italian SMEs. For a gym in Rome I built the core of an analytics and forecasting layer.</p>
+          <ul class="chips"><li>FastAPI</li><li>React</li><li>Prophet</li><li>Text-to-SQL</li></ul>
+        </article>
 
         <a class="tile t-ml" href="https://github.com/fragiovis/ATP-oracle">
           <div class="tile-top"><span class="mono">Machine learning</span><svg class="go" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></div>
@@ -317,6 +318,15 @@ a.tile:hover .go { transform: translate(3px, -3px); }
           <ul class="chips"><li>LangChain</li><li>Groq</li><li>FastAPI</li></ul>
         </a>
 
+        <a class="tile t-big" href="https://github.com/fragiovis/BigData-FlightAnalysis">
+          <div class="tile-top"><span class="mono">Big data · Benchmarking</span><svg class="go" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></div>
+          <p class="stat">7M</p>
+          <p class="stat-label">US flights, three engines, three environments</p>
+          <h3>Flight Analysis</h3>
+          <p class="desc">Spark Core, Spark SQL and Hive compared locally, on YARN and on an AWS EMR cluster.</p>
+          <ul class="chips"><li>PySpark</li><li>Hive</li><li>Hadoop</li><li>AWS EMR</li></ul>
+        </a>
+
         <a class="tile t-rec" href="https://github.com/fragiovis/what2it">
           <div class="tile-top"><span class="mono">Recommender systems</span><svg class="go" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></div>
           <p class="stat">70 / 30</p>
@@ -326,13 +336,13 @@ a.tile:hover .go { transform: translate(3px, -3px); }
           <ul class="chips"><li>scikit-learn</li><li>PostgreSQL</li><li>Streamlit</li></ul>
         </a>
 
-        <a class="tile t-int" href="https://github.com/fragiovis/homework6-IDD">
-          <div class="tile-top"><span class="mono">Data integration</span><svg class="go" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></div>
-          <p class="stat">2 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg><span class="vh">into</span> 1</p>
-          <p class="stat-label">used-car datasets matched on a single mediated schema</p>
-          <h3>Used-car record linkage</h3>
-          <p class="desc">Team project of four: VIN-based ground truth, two blocking strategies and learned matchers.</p>
-          <ul class="chips"><li>recordlinkage</li><li>dedupe</li><li>pandas</li></ul>
+        <a class="tile t-spring" href="https://github.com/fragiovis/siwFoodFinale">
+          <div class="tile-top"><span class="mono">Backend · Spring Boot</span><svg class="go" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></div>
+          <p class="stat">3 roles</p>
+          <p class="stat-label">visitors, chefs and admins, each with their own access</p>
+          <h3>SiwFood</h3>
+          <p class="desc">Web app for chefs and recipes, with login, role-based access and server-side rendering.</p>
+          <ul class="chips"><li>Java</li><li>Spring Boot</li><li>Spring Security</li><li>Thymeleaf</li><li>PostgreSQL</li></ul>
         </a>
       </div>
 
@@ -346,6 +356,13 @@ a.tile:hover .go { transform: translate(3px, -3px); }
     <div class="wrap">
       <div class="section-head"><h2>Experience</h2></div>
       <ol class="timeline">
+        <li>
+          <span class="when mono">Mar 2026 – present</span>
+          <div>
+            <h3>Co-founder &amp; AI Engineer, MayAI</h3>
+            <p class="org">Independent AI software studio for Italian SMEs (not yet incorporated)</p>
+          </div>
+        </li>
         <li>
           <span class="when mono">Apr – Sep 2026</span>
           <div>
@@ -401,9 +418,9 @@ a.tile:hover .go { transform: translate(3px, -3px); }
         <dl>
           <div><dt>Programming</dt><dd><ul><li>Python</li><li>SQL</li><li>Java</li><li>C/C++</li></ul></dd></div>
           <div><dt>Data &amp; big data</dt><dd><ul><li>Kafka</li><li>Spark</li><li>Hadoop</li><li>Hive</li><li>PostgreSQL</li><li>InfluxDB</li><li>Cassandra</li></ul></dd></div>
-          <div><dt>ML &amp; AI</dt><dd><ul><li>scikit-learn</li><li>PyTorch</li><li>LightGBM</li><li>XGBoost</li><li>SHAP</li><li>LangChain</li><li>RAG</li><li>FAISS</li></ul></dd></div>
-          <div><dt>Cloud &amp; services</dt><dd><ul><li>AWS (EMR, S3)</li><li>Docker</li><li>Git</li><li>Grafana</li><li>FastAPI</li><li>Streamlit</li></ul></dd></div>
-          <div><dt>Languages</dt><dd><ul><li>Italian (native)</li><li>English (B2+)</li><li>Spanish (A2)</li></ul></dd></div>
+          <div><dt>ML &amp; AI</dt><dd><ul><li>scikit-learn</li><li>PyTorch</li><li>LightGBM</li><li>XGBoost</li><li>Prophet</li><li>SHAP</li><li>LangChain</li><li>RAG</li><li>FAISS</li></ul></dd></div>
+          <div><dt>Cloud &amp; services</dt><dd><ul><li>AWS (EMR, S3)</li><li>Docker</li><li>Git</li><li>Grafana</li><li>FastAPI</li><li>Spring Boot</li><li>React</li><li>Streamlit</li></ul></dd></div>
+          <div><dt>Languages</dt><dd><ul><li>Italian (native)</li><li>English (C1)</li><li>Spanish (A2)</li></ul></dd></div>
         </dl>
       </div>
     </div>
